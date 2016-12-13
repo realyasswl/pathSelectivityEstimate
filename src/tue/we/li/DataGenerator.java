@@ -26,9 +26,9 @@ import java.util.stream.IntStream;
  * files will be generated, namely: graph, vertices, labels
  */
 /*
-the format of graph file is as follows:
-start_id,   label,  end_id
-1,          1,      2
+ the format of graph file is as follows:
+ start_id,   label,  end_id
+ 1,          1,      2
 
  "vertices" and "labels" store more information about vertices and labels.
  */
@@ -60,7 +60,7 @@ public class DataGenerator {
             Edge e = new Edge(vertices[i], vertices[i + numberOfEdges], labels[i]);
             edgeList.add(e);
         }
-        File dir=new File("graphdata");
+        File dir = new File("graphdata");
         dir.mkdir();
         File f = new File("graphdata/graph");
         BufferedWriter bw = null;
@@ -72,11 +72,15 @@ public class DataGenerator {
                 bw.newLine();
             }
             bw.flush();
-            bw.close();
         } catch (FileNotFoundException ex) {
             Logger.getLogger(DataGenerator.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
             Logger.getLogger(DataGenerator.class.getName()).log(Level.SEVERE, null, ex);
+        } finally {
+            try {
+                bw.close();
+            } catch (IOException ex) {
+            }
         }
     }
 }
