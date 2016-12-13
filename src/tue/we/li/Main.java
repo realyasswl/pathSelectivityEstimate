@@ -10,7 +10,7 @@ package tue.we.li;
  * @author liwang
  */
 public class Main {
-public static void main(String[] s){
-    System.out.println("update from idea");
-}
+    public static void main(String[] s) {
+        System.out.println("update from idea");
+    }
 }
