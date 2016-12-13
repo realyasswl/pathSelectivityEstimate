@@ -1,3 +1,8 @@
 /build/
 /.idea/
-/graphdata/
+/graphdata/end
+/graphdata/start
+/graphdata/graph
+/graphdata/graph_sorted
+/graphdata/vertices
+/graphdata/labels
